@@ -1,0 +1,27 @@
+
+<div class="container">
+  <h1>New Task</h1>
+ 
+    <%= form_for(@task) do |f| %>
+   
+    <li>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </li>
+    <li>
+        <%= f.label :details %>
+        <%= f.text_field :details %>
+    </li>
+    <li>
+        <%= f.label :completed %>
+        <%= f.check_box :completed %>
+    </li>
+    <li>
+       <%= f.submit %>
+    </li>
+
+    <%= link_to 'Back to list', tasks_path%>
+
+  <% end %>
+
+</div>
